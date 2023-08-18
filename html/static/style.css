@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.page .section {
+    width: 980px;
+}
+.image {
+    height: 40px;
+}
+.image .upload {
+    width: 200px;
+    height: 36px;
+}
+
+.section .btn {
+    width: 100px;
+    height: 40px;
+}
+
+.page .views {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.views .list {
+    width: 160px;
+    margin: 10px;
+}
+
+.views .list img {
+    width: 160px;
+}
+
+.views .list .img-label {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

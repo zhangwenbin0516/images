@@ -2,6 +2,7 @@ package router
 
 import "github.com/gin-gonic/gin"
 
-func query(c *gin.Context) {
-
+func Init(route *gin.Engine) {
+	upload(route)
+	images(route)
 }

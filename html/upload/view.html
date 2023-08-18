@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.title}}</title>
+    <link type="text/css" rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<div class="page">
+    <div class="views">
+        {{range .lists}}
+        <div class="list">
+            <div class="img">
+                <img src="{{.url}}" />
+            </div>
+            <div class="img-label">{{.label}}</div>
+        </div>
+        {{end}}
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.title}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<div class="page">
+    <div class="section">
+        <div>图片上传</div>
+        <div class="image">
+            <input id="multiple" class="upload" type="file" multiple />
+        </div>
+        <div><button class="btn" onclick="onUpload()">提交</button></div>
+    </div>
+</div>
+</body>
+<script>
+    function onUpload() {
+        var xhr
+        if (window.ActiveXObject) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP")
+        } else if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest()
+        }
+        var files = document.getElementById("multiple")?.files
+        var formData = new FormData()
+        formData.append("test", "123")
+        for (var i=0; i<files.length; i++) {
+            formData.append("file", files[i])
+        }
+        xhr.open("post", "http://hrm.allkic.xyz:8080/upload/files")
+        xhr.onload = function (res) {
+            console.log(res)
+        }
+        xhr.send(formData)
+    }
+</script>
+</html>

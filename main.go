@@ -1,9 +1,12 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	route "images/router"
+)
 
 func main() {
-	route := gin.Default()
-	
-	route.Run(":36301")
+	router := gin.Default()
+	route.Init(router)
+	router.Run(":8080")
 }
